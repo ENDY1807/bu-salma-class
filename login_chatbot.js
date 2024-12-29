@@ -14,7 +14,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     if (user) {
         alert('Login berhasil! Selamat datang, ' + username + '!');
         // Arahkan ke halaman selanjutnya (misalnya dashboard)
-        window.location.href = 'buku kenangan.html'; // Uncomment jika ada halaman dashboard
+        window.location.href = 'index3.html'; // Uncomment jika ada halaman dashboard
     } else {
         alert('Username atau password salah. Silakan coba lagi.');
     }
