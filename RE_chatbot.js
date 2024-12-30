@@ -3,6 +3,8 @@ document.getElementById('registerForm').addEventListener('submit', function(even
 
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
+    const confirmpassword = document.getElementById('confirmpassword').value;
+    const email = document.getElementById('email').value;
 
     // Simpan data pengguna ke Local Storage
     const users = JSON.parse(localStorage.getItem('users')) || [];
@@ -15,7 +17,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     }
 
     // Tambahkan pengguna baru
-    users.push({ username, password });
+    users.push({ username, password, email, confirmpassword});
     localStorage.setItem('users', JSON.stringify(users));
 
     alert('Akun berhasil dibuat! Silakan login.');
