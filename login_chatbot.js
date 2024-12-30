@@ -3,14 +3,12 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    const confirmpassword = document.getElementById('confirmpassword').value;
-    const email = document.getElementById('email').value;
 
     // Ambil data pengguna dari Local Storage
     const users = JSON.parse(localStorage.getItem('users')) || [];
 
     // Cek apakah username dan password cocok ```javascript
-    const user = users.find(user => user.username === username && user.password === password && user.email === email && confirmpassword === confirmpassword);
+    const user = users.find(user => user.username === username && user.password === password);
 
     // Cek apakah pengguna ditemukan
     if (user) {
